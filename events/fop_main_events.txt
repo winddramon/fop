@@ -1,0 +1,27 @@
+namespace = fop
+
+# Beyond Fallout Main Chain
+country_event = {
+	id = fop.001
+	title = "fop.001.name"
+	desc = "fop.001.desc"
+	picture = GFX_evt_nuclear_explosion
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = fop_beyond_fallout }
+		has_country_flag = fop_country
+	}
+	immediate = {
+		set_country_flag = fop_beyond_fallout
+		begin_event_chain = {
+			event_chain = "fop_beyond_fallout_chain"
+			target = ROOT
+		}
+	}
+	option = {
+		name = "fop.001.a"
+		custom_tooltip = fop.001.a.tooltip
+		add_influence = 10
+	}
+}

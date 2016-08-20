@@ -1,0 +1,9 @@
+mod_Pony = {
+	portraits = {
+		"pony"
+		"unicorn"		
+		"pegasus"
+		"earthpony"
+		"fop_enc"
+	}
+}

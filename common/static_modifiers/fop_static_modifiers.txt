@@ -1,0 +1,32 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+# The names can NOT be removed or changed since the code references them
+
+##########################################################################
+# Empire Base
+##########################################################################
+
+
+##########################################################################
+# Difficulty Modifiers - not applied to vassals of players
+##########################################################################
+
+
+##########################################################################
+# Pop Modifiers
+##########################################################################
+
+
+##########################################################################
+# Generated Planet Modifiers
+##########################################################################
+
+olddays_wasteland = {
+	pop_environment_tolerance = 1.00
+	pop_ethic_shift = -0.05
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_irradiated.dds"
+	icon_frame = 1
+}

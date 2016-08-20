@@ -1,0 +1,61 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		game_start.1
+		game_start.2
+		game_start.3
+		game_start.4
+		game_start.5
+		game_start.fop
+	}
+}
+
+# Triggers event when ship enters a system
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system = {
+	events = {
+		country.2
+		country.6
+		galactic_features.2
+		anomaly.142
+		anomaly.143
+		anomaly.144
+		country.1030
+		country.1050
+		country.1102
+		anomaly.96
+		anomaly.106
+		anomaly.4036
+		galactic_features.350
+		country.254
+		fop.111
+		fop.112
+		fop.113
+		fop.114
+		fop.115
+		fop.116
+		fop.117
+		fop.118
+	}
+	random_events = {
+		100 = 0
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		crisis.30
+		crisis.55
+		crisis.1050
+		crisis.1051
+		crisis.1052
+		nomad.30
+		fop.102
+	}
+}

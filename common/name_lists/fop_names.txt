@@ -1,0 +1,228 @@
+
+FOPN = {
+
+	ship_names = {
+
+		generic = {	
+			"拾荒者" "童子军" "收割者" "铁骑卫" "掠夺者"
+			"赤兔帮" "野牛帮" "鹰爪佣兵" "守望者" "幽灵羊群"
+		}
+
+		corvette = {#一般剧情地点
+			"死亡山丘" "赤兔山脉" "乐麦镇" "蛇蝎沙漠" "铁锈庄园" "花椰菜镇" "纪念碑镇"
+			#"Dead Hills" "Redtrotters ridges" "Happy Straw" "Serpent Desert" "Rust Manor" "Broccoli" "The Memorial"
+			"洪水平原" "麦金塔湖" "雷霆之首" "起飞场" "大市集" "十马城" "水渠谷"
+			#"Flooded Fields"  "Lake Macintosh" "Thunderhead" "Skyport" "Megamart" "Tenpony" "Gutterville"
+		}
+		
+		destroyer = {#重要剧情地点
+			"小马镇" "小角谷" "辉煌峡谷" "无尽之森" "黑马山" "极乐园" "荒原" 
+			"岩块城" "隧道镇" "太阳城" "象牙塔" "铁砧镇" "翡翠海岸" "梦魇陨落"
+			#"Salt Cube Town" "Tunnel Town" "Sun City" "Ivory Tower" "Ironworks" "Emerald Shores" "Nightmare's Fall"
+			"伴行镇" "埋骨之地"
+			#"Withers" "Boneyard"
+			
+		}
+		
+		cruiser = {#战前大城市
+			"云之都" "中心城" "喙灵顿" "吠城" "马哈顿" "苹果鲁萨" "天马维加斯" "水晶帝国"
+		}
+		
+		battleship = {#战前重要概念
+			"谐律" "友谊" "魔法" "忠诚" "诚实" "慷慨" "欢笑" "善良" "慈善" "怜悯" "热忱" "正直" "乐观" "领导" "暖心" "同心" "水晶" "彩虹" "誓言"
+			#"Harmony" "Friendship" "Magic" "Loyalty" "Honesty" "Generosity" "Laughter" "Kindness" "Charity" "Compassion" "Devotion" "Integrity" "Optimism" "Leadership" "Hearth-warming" "Sisterhoof" "Crystal" "Rainbow" "Promise"
+		}
+		
+		science = {#科研项目名
+			"互惠共存" "独行天马" "强制转化" "普罗米修斯"
+		}
+		
+		colonizer = {
+			"Lucky Seed" "Little Bloom" "Faint Glare" "Fleet Star"
+		}
+		
+		constructor = {#工厂名
+			"铁蹄军工" "野马机械" "电光工业" "神盾安保" "砰砰合营" "赤红跑者" "旭日公司"
+			#"Ironshod Firearms" "Robronco" "Flash Industries" "Aegis Security" "Boom Incorporated" "Red Racer" "Solaris"
+		}
+		
+		
+		mining_station = { }
+		research_station = { }
+		wormhole_station = { }
+		terraform_station = { }
+		observation_station = { }
+		outpost_station = {
+			random_names = { }
+			sequential_name = "第%C%星际界碑"
+		}
+
+		military_station_small = {
+		sequential_name = "第%C%星际警戒所"
+		}
+		military_station_medium = {
+		sequential_name = "第%C%星际军事基地"
+		}
+		military_station_large = {
+		sequential_name = "第%C%星际要塞"
+		
+		}	
+	}
+
+	fleet_names = {
+		random_names = {
+			"英克雷星空舰队" "铁骑卫星空舰队" "黛茜派独立舰队" "避难厩防御舰队" "闪电天马舰队" "暗影天马舰队" "赛拉斯蒂亚皇家卫队" "露娜皇家卫队"
+		}
+		sequential_name = "第%C%星空卫队"
+	}
+	
+	army_names = {
+	
+		defense_army = {
+			sequential_name = "第%C%行星防御军"
+		}
+			
+		assault_army = {
+			sequential_name = "第%C%行星空降军"
+		}
+		
+		slave_army = {
+			sequential_name = "第%C%武装奴隶军"
+		}
+		
+		clone_army = { 
+			sequential_name = "第%C%复制天马兵团"
+		}
+		
+		robotic_army = {
+			sequential_name = "第%C%收割者兵团"
+		}
+		
+		android_army = {
+			sequential_name = "第%C%智能机械兵团"
+		}
+		
+		psionic_army = { 
+			sequential_name = "第%C%魔咒兵团"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "第%C%天角兽兵团"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "联邦第%C%密探小队"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+			 "Exterlot" "Starsdale" "Everfree" "New Manehattan" "Appleloosa" "Winsome Falls" "Fillydelphia" "New Trottingham" "Las Pegasus" "New Hoofington" 
+			 " Everhoof " "Applewood"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			"San Palomino"
+							}
+		}
+		
+		pc_tropical = {
+			names = {
+					}
+		}
+		
+		pc_arid = {
+			names = {
+				
+				}
+		}
+		
+		pc_continental = {
+			names = {
+				"辐射尘" "地平线" "粉雾星"
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+			
+			
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				Amber	Shady	Pumpkin		Peanut		Snowfall	Lilly	Electric	Crystal		Brass	Amethyst 
+				Cookie 	Shining Party 		Moon		Fancy 	 	Tree 	Sun 		Sky 		Ruby 	Purple 
+				Peachy 	Paisley Lucky 		Lily 		Grape 		Iron	Bell 		Lavender 	Cloudy 	Cheese  
+				Mane 	Lotus 	Silver 		Honey 		Golden 		Flower 	Candy 		autumn 		Winter 	Summer 
+				Meadow 	Cloud 	Spring 		Crescent 	Fast 		Misty 	Night 		Apple 		Orange  Twilight
+				Pie 	Hooves 	Starlight	Sunset 		Rainbow 	Rain 	Pear 		Rose 		Lyra 	Sweetie 
+				Carrot 	Cherry 	Indigo 		Lemon 		Snowfall 	Snow 	Windy 		Sunny		Star 	Stormy
+				
+				 
+			}
+			
+			
+			# Always combined with a first name
+			second_names = {
+				Pinch	Longsocks	Daze	Mint	Cake	Tiara		Melody		Pitt		Love	Frost	
+				Blare 	Stars 		Velvet 	Light 	Sugar	Armor 		Favor 		Dancer 		Crush 	Clover 
+				Huger 	Drops 		Cotton 	Bliss 	Smiles 	Splash 		Wave 		Cream 		Pearl 	Valley 
+				Chiffon Blush		Harvest Dreams	Bloom 	Bottom 		Delicious 	Split 		Fritter Munchies 
+				Leaves	Honey 		Fritter Quartz 	Diamond Redheart	Earth 		Blossom 	Shower 	Floss 
+				Kicker 	Chaser 		Dust 	Moon 	Kicker 	Glider 		Zest 		Zap 		Jack 	Maud 
+				Marble	Pinkie 		Shimmer Glimmer Sparkle Dash 		Heart 		Heartstring Top 	Berry 
+				Safari 	Derpy 		Fizy 	Flare 	Swirl	
+			}
+			
+			regnal_first_names = {
+				Amber	Shady	Pumpkin		Peanut		Snowfall	Lilly	Electric	Crystal		Brass	Amethyst 
+				Cookie 	Shining Party 		Moon		Fancy 	 	Tree 	Sun 		Sky 		Ruby 	Purple 
+				Peachy 	Paisley Lucky 		Lily 		Grape 		Iron	Bell 		Lavender 	Cloudy 	Cheese  
+				Mane 	Lotus 	Silver 		Honey 		Golden 		Flower 	Candy 		autumn 		Winter 	Summer 
+				Meadow 	Cloud 	Spring 		Crescent 	Fast 		Misty 	Night 		Apple 		Orange  Twilight
+				Pie 	Hooves 	Starlight	Sunset 		Rainbow 	Rain 	Pear 		Rose 		Lyra 	Sweetie 
+				Carrot 	Cherry 	Indigo 		Lemon 		Snowfall 	Snow 	Windy 		Sunny		Star 	Stormy
+		
+			}
+			
+			regnal_second_names = {
+				Pinch	Longsocks	Daze	Mint	Cake	Tiara		Melody		Pitt		Love	Frost	
+				Blare 	Stars 		Velvet 	Light 	Sugar	Armor 		Favor 		Dancer 		Crush 	Clover 
+				Huger 	Drops 		Cotton 	Bliss 	Smiles 	Splash 		Wave 		Cream 		Pearl 	Valley 
+				Chiffon Blush		Harvest Dreams	Bloom 	Bottom 		Delicious 	Split 		Fritter Munchies 
+				Leaves	Honey 		Fritter Quartz 	Diamond Redheart	Earth 		Blossom 	Shower 	Floss 
+				Kicker 	Chaser 		Dust 	Moon 	Kicker 	Glider 		Zest 		Zap 		Jack 	Maud 
+				Marble	Pinkie 		Shimmer Glimmer Sparkle Dash 		Heart 		Heartstring Top 	Berry 
+				Safari 	Derpy 		Fizy 	Flare 	Swirl	
+			}
+		}
+	}
+}

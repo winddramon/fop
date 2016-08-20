@@ -1,0 +1,268 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+	fop_enc_spitfire	= {     texturefile = "gfx/models/fop/fop_enc_spitfire.dds"}
+	fop_enc_1	= {     texturefile = "gfx/models/fop/fop_enc_1.dds"}
+	fop_enc_2	= {     texturefile = "gfx/models/fop/fop_enc_2.dds"}
+	fop_enc_3	= {     texturefile = "gfx/models/fop/fop_enc_3.dds"}
+	fop_enc_calamity	= {     texturefile = "gfx/models/fop/fop_enc_calamity.dds"}
+	
+	fop_mm	= {     texturefile = "gfx/models/fop/fop_mm.dds"}
+	fop_mmdw	= {     texturefile = "gfx/models/fop/fop_mmdw.dds"}
+	fop_littlepip	= {     texturefile = "gfx/models/fop/fop_littlepip.dds"}
+	fop_blackjack	= {     texturefile = "gfx/models/fop/fop_blackjack.dds"}
+	fop_puppysmiles	= {     texturefile = "gfx/models/fop/fop_puppysmiles.dds"}
+	fop_greaser	= {     texturefile = "gfx/models/fop/fop_greaser.dds"}
+	fop_lancer	= {     texturefile = "gfx/models/fop/fop_lancer.dds"}
+	fop_calamity	= {     texturefile = "gfx/models/fop/fop_calamity.dds"}
+	fop_morning_glory	= {     texturefile = "gfx/models/fop/fop_morning_glory.dds"}
+	fop_astral	= {     texturefile = "gfx/models/fop/fop_astral.dds"}
+	fop_twist	= {     texturefile = "gfx/models/fop/fop_twist.dds"}
+	fop_crystal_eclair	= {     texturefile = "gfx/models/fop/fop_crystal_eclair.dds"}
+	fop_velvet_remedy	= {     texturefile = "gfx/models/fop/fop_velvet_remedy.dds"}
+	fop_triage	= {     texturefile = "gfx/models/fop/fop_triage.dds"}
+	fop_tooty_fruity	= {     texturefile = "gfx/models/fop/fop_tooty_fruity.dds"}
+	fop_rampage	= {     texturefile = "gfx/models/fop/fop_rampage.dds"}
+	fop_leaky_faucet	= {     texturefile = "gfx/models/fop/fop_leaky_faucet.dds"}
+	fop_psychoshy	= {     texturefile = "gfx/models/fop/fop_psychoshy.dds"}
+	fop_enc_sunny_sands	= {     texturefile = "gfx/models/fop/fop_enc_sunny_sands.dds"}
+	fop_redeye	= {     texturefile = "gfx/models/fop/fop_redeye.dds"}
+	fop_appletart_longshot = {     texturefile = "gfx/models/fop/fop_appletart_longshot.dds"}
+	fop_P21 = {     texturefile = "gfx/models/fop/fop_P21.dds"}
+	
+	pe_drfrank	= {     texturefile = "gfx/models/pony_extend/pe_drfrank.dds"}
+	pe_drwhooves	= {     texturefile = "gfx/models/pony_extend/pe_drwhooves.dds"}
+	pe_sunset_shimmer	= {     texturefile = "gfx/models/pony_extend/pe_sunset_shimmer.dds"}
+}
+
+portrait_groups = {
+	fop_enc = {
+		default = fop_littlepip
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					fop_enc_1
+					fop_enc_2
+					fop_mm
+					fop_lancer
+					fop_calamity
+					fop_enc_calamity
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					fop_enc_spitfire
+					fop_littlepip
+					fop_blackjack
+					fop_puppysmiles
+					fop_morning_glory
+					fop_mmdw
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					fop_enc_spitfire
+				}
+			}
+		}		
+		
+		#pop scope#村民头像
+		pop = { #for a specific pop
+			add = {
+				trigger = { owner = { is_primitive = no } }
+				portraits = {
+					fop_mm
+					fop_littlepip
+					fop_blackjack
+					fop_puppysmiles
+					fop_greaser
+					fop_enc_3
+					fop_blackjack
+					fop_morning_glory
+					fop_calamity
+					fop_astral
+					fop_twist
+					fop_crystal_eclair
+					fop_velvet_remedy
+					fop_triage
+					fop_tooty_fruity
+					pe_drwhooves
+					pe_sunset_shimmer
+					fop_rampage
+					fop_leaky_faucet
+					fop_psychoshy
+					fop_P21
+				}
+			}
+			add = {
+				trigger = { owner = { is_primitive = yes } }
+				portraits = {
+				}
+			}
+		}
+		
+				
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					leader_class = general#将军
+					gender = male
+				}
+				portraits = {		
+					fop_mm
+					fop_lancer
+					fop_tooty_fruity
+					fop_redeye
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = general#将军
+					gender = female
+				}
+				portraits = {		
+					fop_littlepip
+					fop_twist
+					fop_rampage
+					fop_leaky_faucet
+					fop_psychoshy
+					fop_appletart_longshot
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = scientist#科学家
+					gender = male
+				}
+				portraits = {
+					pe_drfrank
+					pe_drwhooves
+					fop_P21
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = scientist#科学家
+					gender = female
+				}
+				portraits = {
+					fop_morning_glory
+					fop_astral
+					fop_puppysmiles
+					fop_triage
+					fop_enc_sunny_sands
+					fop_velvet_remedy
+					pe_sunset_shimmer
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = governor#总督
+					gender = male
+				}
+				portraits = {
+					fop_mm
+					fop_calamity
+					fop_enc_calamity
+					fop_tooty_fruity
+					fop_redeye
+					pe_drwhooves
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = governor#总督
+					gender = female
+				}
+				portraits = {
+					fop_littlepip
+					fop_blackjack
+					fop_morning_glory
+					fop_crystal_eclair
+					fop_greaser
+					fop_leaky_faucet
+					pe_sunset_shimmer
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = ruler
+					gender = male
+				}
+				portraits = {
+					fop_enc_1
+					fop_enc_2
+					fop_mm
+					fop_lancer
+					fop_calamity
+					fop_P21
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = ruler
+					gender = female
+				}
+				portraits = {
+					fop_enc_spitfire
+					fop_littlepip
+					fop_blackjack
+					fop_puppysmiles
+					fop_morning_glory
+				}
+			}
+			
+			add = {
+				trigger = {
+					leader_class = admiral#提督
+					gender = male
+				}
+				portraits = {
+					fop_enc_1
+					fop_enc_2
+					fop_enc_calamity
+				}
+			}
+			add = {
+				trigger = {
+					leader_class = admiral#提督
+					gender = female
+				}
+				portraits = {
+					fop_enc_spitfire
+					fop_enc_3
+					fop_enc_sunny_sands
+					fop_mmdw
+					fop_appletart_longshot
+				}
+			}
+		}
+	}
+}

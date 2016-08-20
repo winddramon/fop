@@ -1,0 +1,316 @@
+### Fallout Equestria System
+Fallout_Equestria_system = {
+	name = "Fallout Equestria System"
+	
+	class = "sc_black_hole"
+	asteroids_distance = 80
+	
+	flags = { fop_system }
+	
+	usage = custom_empire
+	
+	planet = {
+		name = "Nightmare's Star"
+		class = star
+		orbit_distance = 0
+	}
+	
+	change_orbit = 60
+	
+	planet = {
+		name = "Nightmare's Lash 1"
+		class = "pc_asteroid"
+		orbit_distance = 20
+		orbit_angle = random
+		size = { min = 1 max = 4 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Nightmare's Lash 2"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = { min = 1 max = 4 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Nightmare's Lash 3"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = { min = 1 max = 4 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Nightmare's Lash 4"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = { min = 1 max = 4 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Nightmare's Left Eye"
+		class = "pc_barren"
+		entity = "barren_planet_01_destroyed_entity"
+		orbit_distance = 0
+		orbit_angle = random
+		size = { min = 12 max = 16 }
+	}
+	
+	planet = {
+		name = "Nightmare's Right Eye"
+		class = "pc_barren"
+		entity = "barren_planet_01_destroyed_entity"
+		orbit_distance = 20
+		orbit_angle = random
+		size = { min = 20 max = 24 }
+	}
+	
+	planet = {
+		name = "Fallout Equestria Planet"
+		class = "pc_nuked"
+		orbit_distance = 40
+		orbit_angle = 120
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			set_owner = ROOT
+			change_pc = "pc_nuked"
+		}
+		
+		init_effect = {
+			add_modifier = {
+				modifier = "olddays_wasteland"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 1
+				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}						
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_city_ruins"
+				add_resource = {
+					resource = engineering_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_city_ruins"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_city_ruins"
+				add_resource = {
+					resource = physics_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_bomb_crater"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}			
+		}
+		
+		moon = {
+			name = "Luna"
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 12
+			orbit_angle = random
+			has_ring = no
+			entity = "cold_barren_planet_luna_entity"
+		}
+		
+		moon = {
+			name = "Sun"
+			class = "pc_g_star"
+			size = 3
+			orbit_distance = 6
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Ursa Major"
+		class = "pc_gas_giant"
+		orbit_distance = 70
+		orbit_angle = random
+		size = 30
+		has_ring = yes
+		entity = "gas_giant_06_entity"
+		
+		moon = {
+			name = "Ursa Minor 1"
+			class = "pc_molten"
+			size = 5
+			orbit_distance = 12
+			orbit_angle = random
+			has_ring = no
+		}
+		moon = {
+			name = "Ursa Minor 2"
+			class = "pc_frozen"
+			size = 5
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}
+		moon = {
+			name = "Ursa Minor 3"
+			class = "pc_molten"
+			size = 5
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}
+		moon = {
+			name = "Ursa Minor 4"
+			class = "pc_frozen"
+			size = 5
+			orbit_distance = 2
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Frozen"
+		class = "pc_gas_giant"
+		orbit_distance = 50
+		orbit_angle = random
+		size = 20
+		has_ring = no
+		entity = "gas_giant_02_entity"
+		
+		moon = {
+			name = "Windigos 1"
+			class = "pc_frozen"
+			size = 5
+			orbit_distance = 15
+			orbit_angle = random
+			has_ring = no
+		}
+		
+		moon = {
+			name = "Windigos 2"
+			class = "pc_frozen"
+			size = 5
+			orbit_distance = 4
+			orbit_angle = random
+			has_ring = no
+		}
+		
+		moon = {
+			name = "Windigos 3"
+			class = "pc_frozen"
+			size = 5
+			orbit_distance = 5
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Shadow"
+		class = "pc_barren"
+		entity = "barren_planet_01_destroyed_entity"
+		orbit_distance = 25
+		orbit_angle = random
+		size = { min = 12 max = 15 }
+	}
+}

@@ -1,0 +1,18 @@
+namespace = game_start
+
+### Hidden Game Start Event
+event = {
+	id = game_start.fop
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+				has_country_flag = fop_country
+			}
+			
+			country_event = { id = fop.001 days = 5 random = 1 }
+		}
+	}
+}

@@ -1,0 +1,8 @@
+### Planet Modifiers
+
+pm_olddays_wasteland = {
+	spawn_chance = {
+		#None - From anomaly 
+	}
+	modifier = "olddays_wasteland"
+}

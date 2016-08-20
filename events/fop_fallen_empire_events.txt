@@ -1,0 +1,207 @@
+############################
+#
+# Fallen Empire Events
+#
+# Written by Martin Anward
+#
+############################
+
+namespace = fallen_empires
+
+country_event = {
+	id = fallen_empires.4
+	title = fallen_empires.4.name
+	desc = fallen_empires.4.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from
+	}
+	
+	option = {
+		name = fallen_empires.4.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				fleet_power > 50000
+			}
+		}		
+		every_owned_planet = {
+			limit = {
+				OR = {
+					has_modifier = "holy_planet"
+					AND = {
+						is_planet_class = pc_nuked
+						NOT = { has_modifier = "capital" }
+					}					
+				}
+			}
+			destroy_colony = yes
+		}
+		add_modifier = { modifier = humiliated days = 3600 }
+		from = { add_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_demand } }
+	}
+	
+	option = {
+		name = fallen_empires.4.b
+		ai_chance = {
+			factor = 10
+		}		
+		from = { add_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_demand } }
+	}
+}
+
+country_event = {
+	id = fallen_empires.9
+	title = fallen_empires.9.name
+	desc = fallen_empires.9.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from
+	}
+	
+	option = {
+		name = fallen_empires.9.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				fleet_power > 50000
+			}			
+		}		
+		every_owned_planet = {
+			limit = {
+				OR = {
+					has_modifier = "holy_planet"
+					AND = {
+						is_planet_class = pc_nuked
+						NOT = { has_modifier = "capital" }
+					}		
+				}
+			}
+			destroy_colony = yes
+		}
+		add_modifier = { modifier = humiliated days = 3600 }
+		from = { add_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_demand } }
+	}
+	
+	option = {
+		name = fallen_empires.9.b
+		ai_chance = {
+			factor = 10
+		}		
+		from = { add_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_demand } }
+	}
+}
+
+
+# Fallen Empire establishes communications in order to warn empire that is being naughty
+country_event = {
+	id = fallen_empires.10
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		is_country_type = fallen_empire
+		is_at_war = no
+		any_country = {
+			is_country_type = default
+			NOT = { has_communications = root }			
+			OR = {
+				AND = {
+					root = { has_ai_personality = fallen_empire_spiritualist }
+					OR = {
+						any_owned_planet = {
+							has_modifier = "holy_planet"
+						}	
+						#any_owned_planet = {
+							#is_planet_class = pc_nuked
+							#NOT = { has_modifier = "capital" }
+						#}						
+					}				
+				}
+				AND = {
+					root = { has_ai_personality = fallen_empire_materialist }
+					OR = {
+						has_technology = tech_sentient_ai
+						has_technology = tech_synthetic_workers
+					}
+					any_system = {
+						distance = {
+							source = root:capital
+							max_distance = 200				
+						}
+					}					
+				}
+				# also contact if we border them
+				any_owned_planet = {
+					is_neighbor_of = root			
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_communications = root }				
+				OR = {
+					AND = {
+						root = { has_ai_personality = fallen_empire_spiritualist }
+						OR = {
+							any_owned_planet = {
+								has_modifier = "holy_planet"
+							}	
+							#any_owned_planet = {
+								#is_planet_class = pc_nuked
+								#NOT = { has_modifier = "capital" }
+						#	}						
+						}						
+					}					
+					AND = {
+						root = { has_ai_personality = fallen_empire_materialist }
+						OR = {
+							has_technology = tech_sentient_ai
+							has_technology = tech_synthetic_workers
+						}
+						any_system = {
+							distance = {
+								source = root:capital
+								max_distance = 200				
+							}
+						}						
+					}	
+					# also contact if we border them
+					any_owned_planet = {
+						is_neighbor_of = root			
+					}						
+				}					
+			}
+
+			establish_communications_no_message = root	
+			root = { save_event_target_as = contact_empire }
+			country_event = { id = action.1 }				
+		}
+	}
+}

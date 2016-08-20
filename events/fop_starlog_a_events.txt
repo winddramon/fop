@@ -1,0 +1,874 @@
+namespace = fop
+
+@tier1materialreward = 6
+@tier1materialmin = 100
+@tier1materialmax = 500
+@tier2materialreward = 12
+@tier2materialmin = 150
+@tier2materialmax = 1000
+@tier3materialreward = 18
+@tier3materialmin = 250
+@tier3materialmax = 1500
+@tier4materialreward = 24
+@tier4materialmin = 350
+@tier4materialmax = 2000
+
+@tier1influencereward = 6
+@tier1influencemin = 40
+@tier1influencemax = 100
+@tier2influencereward = 12
+@tier2influencemin = 80
+@tier2influencemax = 175
+@tier3influencereward = 18
+@tier3influencemin = 125
+@tier3influencemax = 250
+@tier4influencereward = 24
+@tier4influencemin = 150
+@tier4influencemax = 300
+
+@tier1researchreward = 6
+@tier1researchmin = 60
+@tier1researchmax = 150
+@tier2researchreward = 12
+@tier2researchmin = 90
+@tier2researchmax = 250
+@tier3researchreward = 18
+@tier3researchmin = 120
+@tier3researchmax = 350
+@tier4researchreward = 24
+@tier4researchmin = 150
+@tier4researchmax = 500
+
+# Anesie's Logs
+country_event = {
+	id = fop.101
+	title = "fop.101.name"
+	desc = "fop.101.desc"
+	picture = GFX_evt_nuclear_explosion
+	
+	trigger = {
+		is_ai = no
+		has_country_flag = fop_beyond_fallout
+		has_country_flag = fop_country
+		NOT = { has_country_flag = fop_starlog_anesie_0 }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = fop_starlog_anesie_0
+		begin_event_chain = {
+			event_chain = "fop_starlog_anesie_chain"
+			target = ROOT
+		}
+		capital_scope = { save_event_target_as = capital }
+		hidden_effect = {
+			random_system = {
+				limit = {
+					distance = {
+						source = event_target:capital
+						max_distance = 180
+						min_distance = 5
+					}
+					NOT = {
+						has_country_flag = fop_starlog_anesie_1
+					}
+					any_planet = {
+						solar_system = {
+							OR = {
+								NOT = { exists = space_owner }
+								AND = {
+									exists = space_owner 
+									space_owner = {
+										NOT = { is_country_type = fallen_empire }
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = starlog_anesie_system_1
+				set_star_flag = starlog_anesie_system_1
+			}
+			
+			random_system = {
+				limit = {
+					distance = {
+						source = event_target:capital
+						max_distance = 180
+						min_distance = 5
+					}
+					NOT = { 
+						has_star_flag = starlog_anesie_system_1
+					}
+					NOT = {
+						has_country_flag = fop_starlog_anesie_2
+					}
+					any_planet = {
+						solar_system = {
+							OR = {
+								NOT = { exists = space_owner }
+								AND = {
+									exists = space_owner 
+									space_owner = {
+										NOT = { is_country_type = fallen_empire }
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = starlog_anesie_system_2
+				set_star_flag = starlog_anesie_system_2
+			}
+			
+			random_system = {
+				limit = {
+					distance = {
+						source = event_target:capital
+						max_distance = 180
+						min_distance = 5
+					}
+					NOT = { 
+						has_star_flag = starlog_anesie_system_1
+						has_star_flag = starlog_anesie_system_2
+					}
+					NOT = {
+						has_country_flag = fop_starlog_anesie_3
+					}
+					any_planet = {
+						solar_system = {
+							OR = {
+								NOT = { exists = space_owner }
+								AND = {
+									exists = space_owner 
+									space_owner = {
+										NOT = { is_country_type = fallen_empire }
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = starlog_anesie_system_3
+				set_star_flag = starlog_anesie_system_3
+			}
+			
+			random_system = {
+				limit = {
+					distance = {
+						source = event_target:capital
+						max_distance = 180
+						min_distance = 5
+					}
+					NOT = { 
+						has_star_flag = starlog_anesie_system_1
+						has_star_flag = starlog_anesie_system_2
+						has_star_flag = starlog_anesie_system_3
+					}
+					NOT = {
+						has_country_flag = fop_starlog_anesie_4
+					}
+					any_planet = {
+						solar_system = {
+							OR = {
+								NOT = { exists = space_owner }
+								AND = {
+									exists = space_owner 
+									space_owner = {
+										NOT = { is_country_type = fallen_empire }
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = starlog_anesie_system_4
+				set_star_flag = starlog_anesie_system_4
+			}
+			
+			random_system = {
+				limit = {
+					distance = {
+						source = event_target:capital
+						max_distance = 180
+						min_distance = 5
+					}
+					NOT = { 
+						has_star_flag = starlog_anesie_system_1
+						has_star_flag = starlog_anesie_system_2
+						has_star_flag = starlog_anesie_system_3
+						has_star_flag = starlog_anesie_system_4
+					}
+					NOT = {
+						has_country_flag = fop_starlog_anesie_5
+					}
+					any_planet = {
+						solar_system = {
+							OR = {
+								NOT = { exists = space_owner }
+								AND = {
+									exists = space_owner 
+									space_owner = {
+										NOT = { is_country_type = fallen_empire }
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = starlog_anesie_system_5
+				set_star_flag = starlog_anesie_system_5
+			}
+			
+			random_system = {
+				limit = {
+					distance = {
+						source = event_target:capital
+						max_distance = 180
+						min_distance = 5
+					}
+					NOT = { 
+						has_star_flag = starlog_anesie_system_1
+						has_star_flag = starlog_anesie_system_2
+						has_star_flag = starlog_anesie_system_3
+						has_star_flag = starlog_anesie_system_4
+						has_star_flag = starlog_anesie_system_5
+					}
+					NOT = {
+						has_country_flag = fop_starlog_anesie_6
+					}
+					any_planet = {
+						solar_system = {
+							OR = {
+								NOT = { exists = space_owner }
+								AND = {
+									exists = space_owner 
+									space_owner = {
+										NOT = { is_country_type = fallen_empire }
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = starlog_anesie_system_6
+				set_star_flag = starlog_anesie_system_6
+			}
+			
+			random_system = {
+				limit = {
+					distance = {
+						source = event_target:capital
+						max_distance = 180
+						min_distance = 5
+					}
+					NOT = { 
+						has_star_flag = starlog_anesie_system_1
+						has_star_flag = starlog_anesie_system_2
+						has_star_flag = starlog_anesie_system_3
+						has_star_flag = starlog_anesie_system_4
+						has_star_flag = starlog_anesie_system_5
+						has_star_flag = starlog_anesie_system_6
+					}
+					NOT = {
+						has_country_flag = fop_starlog_anesie_7
+					}
+					any_planet = {
+						solar_system = {
+							OR = {
+								NOT = { exists = space_owner }
+								AND = {
+									exists = space_owner 
+									space_owner = {
+										NOT = { is_country_type = fallen_empire }
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = starlog_anesie_system_7
+				set_star_flag = starlog_anesie_system_7
+			}
+			
+			random_system = {
+				limit = {
+					distance = {
+						source = event_target:capital
+						max_distance = 180
+						min_distance = 5
+					}
+					NOT = { 
+						has_star_flag = starlog_anesie_system_1
+						has_star_flag = starlog_anesie_system_2
+						has_star_flag = starlog_anesie_system_3
+						has_star_flag = starlog_anesie_system_4
+						has_star_flag = starlog_anesie_system_5
+						has_star_flag = starlog_anesie_system_6
+						has_star_flag = starlog_anesie_system_7
+					}
+					NOT = {
+						has_country_flag = fop_starlog_anesie_8
+					}
+					any_planet = {
+						solar_system = {
+							OR = {
+								NOT = { exists = space_owner }
+								AND = {
+									exists = space_owner 
+									space_owner = {
+										NOT = { is_country_type = fallen_empire }
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = starlog_anesie_system_8
+				set_star_flag = starlog_anesie_system_8
+			}
+			
+			create_point_of_interest = {
+				id = fop_starlog_anesie.1
+				name = "fop_starlog_anesie_1_poi"
+				desc = "fop_starlog_anesie_1_poi_desc"
+				event_chain = "fop_starlog_anesie_chain"
+				location = event_target:starlog_anesie_system_1
+			}
+			create_point_of_interest = {
+				id = fop_starlog_anesie.2
+				name = "fop_starlog_anesie_2_poi"
+				desc = "fop_starlog_anesie_2_poi_desc"
+				event_chain = "fop_starlog_anesie_chain"
+				location = event_target:starlog_anesie_system_2
+			}
+			create_point_of_interest = {
+				id = fop_starlog_anesie.3
+				name = "fop_starlog_anesie_3_poi"
+				desc = "fop_starlog_anesie_3_poi_desc"
+				event_chain = "fop_starlog_anesie_chain"
+				location = event_target:starlog_anesie_system_3
+			}
+			create_point_of_interest = {
+				id = fop_starlog_anesie.4
+				name = "fop_starlog_anesie_4_poi"
+				desc = "fop_starlog_anesie_4_poi_desc"
+				event_chain = "fop_starlog_anesie_chain"
+				location = event_target:starlog_anesie_system_4
+			}
+			create_point_of_interest = {
+				id = fop_starlog_anesie.5
+				name = "fop_starlog_anesie_5_poi"
+				desc = "fop_starlog_anesie_5_poi_desc"
+				event_chain = "fop_starlog_anesie_chain"
+				location = event_target:starlog_anesie_system_5
+			}
+			create_point_of_interest = {
+				id = fop_starlog_anesie.6
+				name = "fop_starlog_anesie_6_poi"
+				desc = "fop_starlog_anesie_6_poi_desc"
+				event_chain = "fop_starlog_anesie_chain"
+				location = event_target:starlog_anesie_system_6
+			}
+			create_point_of_interest = {
+				id = fop_starlog_anesie.7
+				name = "fop_starlog_anesie_7_poi"
+				desc = "fop_starlog_anesie_7_poi_desc"
+				event_chain = "fop_starlog_anesie_chain"
+				location = event_target:starlog_anesie_system_7
+			}
+			create_point_of_interest = {
+				id = fop_starlog_anesie.8
+				name = "fop_starlog_anesie_8_poi"
+				desc = "fop_starlog_anesie_8_poi_desc"
+				event_chain = "fop_starlog_anesie_chain"
+				location = event_target:starlog_anesie_system_8
+			}
+			country_event = { id = fop.103 days = 1 }
+		}
+	}
+	option = {
+		name = fop.101.a
+		custom_tooltip = fop.101.a.tooltip
+	}
+}
+
+# Starlog Diplomacy
+country_event = {
+	id = fop.102
+	title = "fop.102.name"
+	
+	diplomatic = yes
+	
+	trigger = {
+		has_country_flag = fop_starlog_anesie_0
+	}
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+	
+	is_triggered_only = yes
+	
+	desc = {
+		text = fop.102.desc
+	}
+	option = {
+		name = fop.102.a
+		is_dialog_only = yes
+		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_1 }	}
+		response_text = fop.102.error
+	}
+	option = {
+		name = fop.102.a
+		is_dialog_only = yes
+		trigger = {	has_country_flag = fop_starlog_anesie_1	}
+		response_text = fop.102.a.responses
+	}
+	option = {
+		name = fop.102.b
+		is_dialog_only = yes
+		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_2 }	}
+		response_text = fop.102.error
+	}
+	option = {
+		name = fop.102.b
+		is_dialog_only = yes
+		trigger = {	has_country_flag = fop_starlog_anesie_2 }
+		response_text = fop.102.b.responses
+	}
+	option = {
+		name = fop.102.c
+		is_dialog_only = yes
+		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_3 }	}
+		response_text = fop.102.error
+	}
+	option = {
+		name = fop.102.c
+		is_dialog_only = yes
+		trigger = {	has_country_flag = fop_starlog_anesie_3 }
+		response_text = fop.102.c.responses
+	}
+	option = {
+		name = fop.102.d
+		is_dialog_only = yes
+		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_4 }	}
+		response_text = fop.102.error
+	}
+	option = {
+		name = fop.102.d
+		is_dialog_only = yes
+		trigger = {	has_country_flag = fop_starlog_anesie_4 }
+		response_text = fop.102.d.responses
+	}
+	option = {
+		name = fop.102.e
+		is_dialog_only = yes
+		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_5 }	}
+		response_text = fop.102.error
+	}
+	option = {
+		name = fop.102.e
+		is_dialog_only = yes
+		trigger = {	has_country_flag = fop_starlog_anesie_5 }
+		response_text = fop.102.e.responses
+	}
+	option = {
+		name = fop.102.f
+		is_dialog_only = yes
+		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_6 }	}
+		response_text = fop.102.error
+	}
+	option = {
+		name = fop.102.f
+		is_dialog_only = yes
+		trigger = {	has_country_flag = fop_starlog_anesie_6 }
+		response_text = fop.102.f.responses
+	}
+	option = {
+		name = fop.102.g
+		is_dialog_only = yes
+		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_7 }	}
+		response_text = fop.102.error
+	}
+	option = {
+		name = fop.102.g
+		is_dialog_only = yes
+		trigger = {	has_country_flag = fop_starlog_anesie_7 }
+		response_text = fop.102.g.responses
+	}
+	option = {
+		name = fop.102.h
+		is_dialog_only = yes
+		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_8 }	}
+		response_text = fop.102.error
+	}
+	option = {
+		name = fop.102.h
+		is_dialog_only = yes
+		trigger = {	has_country_flag = fop_starlog_anesie_8 }
+		response_text = fop.102.h.responses
+	}
+	option = {
+		name = fop.102.exit
+	}
+}
+# Create Starlog Database
+country_event = {
+	id = fop.103
+	title = "OK"
+	desc = root.name
+	hide_window = yes
+	is_triggered_only = yes
+	#owner_species = { save_event_target_as = owner_species }
+	immediate = {
+		create_country = {
+			name = "语音记录数据库"
+			#species = owner_species
+			type = starlog_database
+			#auto_delete = no
+		}
+		last_created_country = {
+			set_country_flag = starlog_database
+			#establish_contact = { who = root location = root.capital_scope.solar_system }
+			establish_communications = root
+			save_global_event_target_as = database_country
+		}
+	}
+}
+
+ship_event = {
+	id = fop.111
+	title = "fop.111.name"
+	desc = "fop.111.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_scanner
+	location = root
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_event_chain = "fop_starlog_anesie_chain"
+		}
+		solar_system = { has_star_flag = starlog_anesie_system_1}
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = fop_starlog_anesie_1
+				remove_point_of_interest = fop_starlog_anesie.1
+				add_event_chain_counter = { 
+					event_chain = "fop_starlog_anesie_chain" 
+					counter = "fop_starlog_anesie_chain_counter" 
+					amount = 1 
+				}
+			}
+			solar_system = { remove_star_flag = starlog_anesie_system_1 }
+		}
+	}
+}
+
+ship_event = {
+	id = fop.112
+	title = "fop.112.name"
+	desc = "fop.112.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_scanner
+	location = root
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_event_chain = "fop_starlog_anesie_chain"
+		}
+		solar_system = { has_star_flag = starlog_anesie_system_2}
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = fop_starlog_anesie_2
+				remove_point_of_interest = fop_starlog_anesie.2
+				add_event_chain_counter = { 
+					event_chain = "fop_starlog_anesie_chain" 
+					counter = "fop_starlog_anesie_chain_counter" 
+					amount = 1 
+				}
+			}
+			solar_system = { remove_star_flag = starlog_anesie_system_2 }
+			
+		}
+	}
+}
+
+ship_event = {
+	id = fop.113
+	title = "fop.113.name"
+	desc = "fop.113.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_scanner
+	location = root
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_event_chain = "fop_starlog_anesie_chain"
+		}
+		solar_system = { has_star_flag = starlog_anesie_system_3}
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = fop_starlog_anesie_3
+				remove_point_of_interest = fop_starlog_anesie.3
+				add_event_chain_counter = { 
+					event_chain = "fop_starlog_anesie_chain" 
+					counter = "fop_starlog_anesie_chain_counter" 
+					amount = 1 
+				}
+			}
+			solar_system = { remove_star_flag = starlog_anesie_system_3 }
+			
+		}
+	}
+}
+
+ship_event = {
+	id = fop.114
+	title = "fop.114.name"
+	desc = "fop.114.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_scanner
+	location = root
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_event_chain = "fop_starlog_anesie_chain"
+		}
+		solar_system = { has_star_flag = starlog_anesie_system_4}
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = fop_starlog_anesie_4
+				remove_point_of_interest = fop_starlog_anesie.4
+				add_event_chain_counter = { 
+					event_chain = "fop_starlog_anesie_chain" 
+					counter = "fop_starlog_anesie_chain_counter" 
+					amount = 1 
+				}
+			}
+			solar_system = { remove_star_flag = starlog_anesie_system_4 }
+			
+		}
+	}
+}
+
+ship_event = {
+	id = fop.115
+	title = "fop.115.name"
+	desc = "fop.115.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_scanner
+	location = root
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_event_chain = "fop_starlog_anesie_chain"
+		}
+		solar_system = { has_star_flag = starlog_anesie_system_5}
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = fop_starlog_anesie_5
+				remove_point_of_interest = fop_starlog_anesie.5
+				add_event_chain_counter = { 
+					event_chain = "fop_starlog_anesie_chain" 
+					counter = "fop_starlog_anesie_chain_counter" 
+					amount = 1 
+				}
+			}
+			solar_system = { remove_star_flag = starlog_anesie_system_5 }
+			
+		}
+	}
+}
+
+ship_event = {
+	id = fop.116
+	title = "fop.116.name"
+	desc = "fop.116.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_scanner
+	location = root
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_event_chain = "fop_starlog_anesie_chain"
+		}
+		solar_system = { has_star_flag = starlog_anesie_system_6}
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = fop_starlog_anesie_6
+				remove_point_of_interest = fop_starlog_anesie.6
+				add_event_chain_counter = { 
+					event_chain = "fop_starlog_anesie_chain" 
+					counter = "fop_starlog_anesie_chain_counter" 
+					amount = 1 
+				}
+			}
+			solar_system = { remove_star_flag = starlog_anesie_system_6 }
+			
+		}
+	}
+}
+
+ship_event = {
+	id = fop.117
+	title = "fop.117.name"
+	desc = "fop.117.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_scanner
+	location = root
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_event_chain = "fop_starlog_anesie_chain"
+		}
+		solar_system = { has_star_flag = starlog_anesie_system_7}
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = fop_starlog_anesie_7
+				remove_point_of_interest = fop_starlog_anesie.7
+				add_event_chain_counter = { 
+					event_chain = "fop_starlog_anesie_chain" 
+					counter = "fop_starlog_anesie_chain_counter" 
+					amount = 1 
+				}
+			}
+			solar_system = { remove_star_flag = starlog_anesie_system_7 }
+			
+		}
+	}
+}
+
+ship_event = {
+	id = fop.118
+	title = "fop.118.name"
+	desc = "fop.118.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_scanner
+	location = root
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_ai = no
+			has_event_chain = "fop_starlog_anesie_chain"
+		}
+		solar_system = { has_star_flag = starlog_anesie_system_8}
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				set_country_flag = fop_starlog_anesie_8
+				remove_point_of_interest = fop_starlog_anesie.8
+				add_event_chain_counter = { 
+					event_chain = "fop_starlog_anesie_chain" 
+					counter = "fop_starlog_anesie_chain_counter" 
+					amount = 1 
+				}
+			}
+			solar_system = { remove_star_flag = starlog_anesie_system_8 }
+			
+		}
+	}
+}
+
+# Anesie's Logs Finished
+country_event = {
+	id = fop.120
+	title = "fop.120.name"
+	desc = "fop.120.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_alien_nature
+	
+	trigger = {
+		OR = {
+			has_completed_event_chain_counter = {
+				event_chain = "fop_starlog_anesie_chain" 
+				counter = "fop_starlog_anesie_chain_counter" 
+			}
+			AND = {
+				has_country_flag = fop_starlog_anesie_1
+				has_country_flag = fop_starlog_anesie_2
+				has_country_flag = fop_starlog_anesie_3
+				has_country_flag = fop_starlog_anesie_4
+				has_country_flag = fop_starlog_anesie_5
+				has_country_flag = fop_starlog_anesie_6
+				has_country_flag = fop_starlog_anesie_7
+				has_country_flag = fop_starlog_anesie_8
+			}
+		}
+		NOT = { has_country_flag = fop_starlog_anesie_F }
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	#is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = fop_starlog_anesie_F
+	}
+
+	option = {
+		name = "fop.120.a"
+		end_event_chain = "fop_starlog_anesie_chain"
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = @tier3researchreward
+			min = @tier3researchmin
+			max = @tier3researchmax
+		}
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier1influencereward
+			min = @tier1influencemin
+			max = @tier1influencemax
+		}
+	}
+}

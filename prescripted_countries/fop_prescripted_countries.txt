@@ -1,0 +1,62 @@
+fallout_pony = {
+	name = "天马英克雷联邦"
+	adjective = "天马英克雷联邦的"
+	spawn_enabled = no # yes / no / always
+	
+	name_list = "FOPN"
+	ship_prefix = "ENC"
+	
+	species_name = "废土小马"
+	species_plural = "废土小马"	#we should localize this!
+	species_adjective = "废土小马的"
+	species_class = "mod_Pony"
+	trait="trait_charismatic"
+	trait="trait_adaptive"
+	trait="trait_deviants"
+	portrait = "fop_enc"
+	
+	
+	government = "military_junta"
+	ethic="ethic_collectivist"
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"
+
+	flags = { fop_country custom_start_screen }
+	
+	weapon = "tech_missiles_1"
+	ftl = wormhole
+	
+	planet_name="云之都"
+	planet_class="pc_continental"
+	system_name="小马星系"
+	initializer="Fallout_Equestria_system"
+	
+	graphical_culture="avian_01"
+	city_graphical_culture="avian_01"
+	
+	empire_flag={
+		icon={
+			category="Equ"
+			file="06_SOE.dds"
+		}
+		background={
+			category="backgrounds"
+			file="v.dds"
+		}
+		colors={
+			"turquoise"
+			"dark_blue"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="飞火"
+		portrait="fop_enc_spitfire"
+		texture=0
+		hair=0
+		clothes=0
+		heir_title_female="继任者"
+	}
+}
