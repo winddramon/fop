@@ -51,7 +51,7 @@ country_event = {
 				is_country_type = crystal
 				is_country_type = drone
 				is_country_type = cloud
-				is_country_type = starlog_database
+				is_country_type = npc
 			}
 			is_primitive = no
 		}
@@ -143,7 +143,7 @@ country_event = {
 			NOT = {
 				has_country_flag = radical_cult
 				is_country_type = fallen_empire
-				is_country_type = starlog_database
+				is_country_type = npc
 				has_relation_flag = { flag = no_coms who = root }
 				has_relation_flag = { flag = AbandonedRefugees who = root }
 				has_relation_flag = { flag = pirate_relation who = root }

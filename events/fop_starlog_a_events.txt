@@ -50,7 +50,10 @@ country_event = {
 		is_ai = no
 		has_country_flag = fop_beyond_fallout
 		has_country_flag = fop_country
-		NOT = { has_country_flag = fop_starlog_anesie_0 }
+		NOT = {
+			has_country_flag = fop_starlog_anesie_0
+			has_country_flag = fop_starlog_anesie_F
+		}
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -527,11 +530,11 @@ country_event = {
 		create_country = {
 			name = "语音记录数据库"
 			#species = owner_species
-			type = starlog_database
+			type = npc
 			#auto_delete = no
 		}
 		last_created_country = {
-			set_country_flag = starlog_database
+			set_country_flag = starlog_database_a
 			#establish_contact = { who = root location = root.capital_scope.solar_system }
 			establish_communications = root
 			save_global_event_target_as = database_country
@@ -576,7 +579,7 @@ ship_event = {
 ship_event = {
 	id = fop.112
 	title = "fop.112.name"
-	desc = "fop.112.desc"
+	desc = "fop.111.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_scanner
 	location = root
@@ -611,7 +614,7 @@ ship_event = {
 ship_event = {
 	id = fop.113
 	title = "fop.113.name"
-	desc = "fop.113.desc"
+	desc = "fop.111.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_scanner
 	location = root
@@ -646,7 +649,7 @@ ship_event = {
 ship_event = {
 	id = fop.114
 	title = "fop.114.name"
-	desc = "fop.114.desc"
+	desc = "fop.111.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_scanner
 	location = root
@@ -681,7 +684,7 @@ ship_event = {
 ship_event = {
 	id = fop.115
 	title = "fop.115.name"
-	desc = "fop.115.desc"
+	desc = "fop.111.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_scanner
 	location = root
@@ -716,7 +719,7 @@ ship_event = {
 ship_event = {
 	id = fop.116
 	title = "fop.116.name"
-	desc = "fop.116.desc"
+	desc = "fop.111.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_scanner
 	location = root
@@ -751,7 +754,7 @@ ship_event = {
 ship_event = {
 	id = fop.117
 	title = "fop.117.name"
-	desc = "fop.117.desc"
+	desc = "fop.111.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_scanner
 	location = root
@@ -786,7 +789,7 @@ ship_event = {
 ship_event = {
 	id = fop.118
 	title = "fop.118.name"
-	desc = "fop.118.desc"
+	desc = "fop.111.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_scanner
 	location = root
@@ -864,11 +867,6 @@ country_event = {
 			min = @tier3researchmin
 			max = @tier3researchmax
 		}
-		add_monthly_resource_mult = {
-			resource = influence
-			value = @tier1influencereward
-			min = @tier1influencemin
-			max = @tier1influencemax
-		}
+		add_modifier = { modifier = anesie_code }
 	}
 }

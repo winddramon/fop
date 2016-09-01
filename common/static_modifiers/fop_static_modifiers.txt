@@ -30,3 +30,11 @@ olddays_wasteland = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_irradiated.dds"
 	icon_frame = 1
 }
+
+##########################################################################
+# Country modifiers
+##########################################################################
+
+anesie_code = {
+	tile_resource_society_research_mult = 0.05
+}

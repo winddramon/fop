@@ -62,7 +62,7 @@
 #		standard_pop_factions_module = {}
 #	}
 #}
-starlog_database = {
+npc = {
 	show_in_contacts_list = yes
 	ai = {
 		enabled = no

@@ -36,8 +36,8 @@ fallout_pony = {
 	
 	empire_flag={
 		icon={
-			category="Equ"
-			file="06_SOE.dds"
+			category="fop"
+			file="fop_0.dds"
 		}
 		background={
 			category="backgrounds"

@@ -1,0 +1,172 @@
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+tech_fop_magic_theory = {
+	area = society
+	tier = 1
+	cost = @tier1cost1
+	category = { psionics }
+	#prerequisites = { "tech_basic_science_lab_1" }
+	weight = @tier1weight1
+	
+	modifier = {
+		#all_technology_research_speed = 0.05
+		tile_resource_society_research_mult = 0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = "fop_country"
+			}
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = "fop_country"
+		}
+		modifier = {
+			factor = 2
+			years_passed > 2
+		}
+		modifier = {
+			factor = 5
+			years_passed > 4
+		}
+		modifier = {
+			factor = 10
+			years_passed > 6
+		}
+		modifier = {
+			factor = 10
+			years_passed > 10
+		}
+	}
+	
+	ai_weight = {
+		#factor = 0  # Can AI dream of fallout ponies?
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = "fop_country"
+			}
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = "fop_country"
+		}
+	}
+}
+
+tech_fop_magic_power = {
+	area = society
+	tier = 2
+	cost = @tier2cost2
+	category = { psionics }
+	prerequisites = { "tech_fop_magic_theory" }
+	weight = @tier2weight1
+	
+	modifier = {
+		max_energy = 250
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = "fop_country"
+			}
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = "fop_country"
+		}
+		modifier = {
+			factor = 1.05
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.2
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+	
+	ai_weight = {
+		#factor = 0  # Can AI dream of fallout ponies?
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = "fop_country"
+			}
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = "fop_country"
+		}
+		modifier = {
+			factor = 1.05
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.2
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+}

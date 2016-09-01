@@ -1,3 +1,4 @@
+**portraits:
 Vector-brony
 brisineo
 outlawedtofu
@@ -11,3 +12,7 @@ sketchmcreations
 vectorfag
 blue_stroke
 uckysmores
+
+**flags:
+Overmare Studios
+lightning5trike

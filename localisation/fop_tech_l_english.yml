@@ -1,0 +1,15 @@
+﻿l_english:
+	tech_fop_magic_theory:0 "魔法理论"
+	tech_fop_magic_theory_desc:0 "我们一部分同胞天生拥有凭意念控制万事万物的能力，而这样的能力在宇宙中也实属罕见。将魔法归入理论框架，可以让我们更深刻地了解自己——以及这个宇宙。"
+	tech_fop_fobidden_tec:0 "封印解除"
+	tech_fop_fobidden_tec_desc:0 "我们的祖先曾经研发过超乎想象的魔法框架——超聚术。我们曾经的文明也正是因为它才化为废土。不过，没有理由认为，我们还会第二次倒在同一个地方。"
+	tech_fop_stable_tec:0 "实用化避难厩"
+	tech_fop_stable_tec_desc:0 "避难厩计划曾经实质上是一场大规模社会实验。不过，将那些匪夷所思的要素剥离之后，避难厩可以成为有效的行星防空设施。"
+	tech_fop_magic_power:0 "魔能反应框架"
+	tech_fop_magic_power_desc:0 "魔法提供了高效的能量转化手段，而反应框架让魔法不再依赖施法者，从而将其稳定高效地运用于工业和军事领域。"
+	
+	SMALL_MAGIC_REACTOR:0 "小型魔能反应堆"
+	MEDIUM_MAGIC_REACTOR:0 "中型魔能反应堆"
+	LARGE_MAGIC_REACTOR:0 "大型魔能反应堆"
+	MAGIC_REACTOR:0 "魔能反应堆"
+	MAGIC_REACTOR_DESC:0 "借助反应框架，我们可以直接用魔力为舰船设备和护盾补充能量。"
