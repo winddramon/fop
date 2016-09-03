@@ -12,7 +12,7 @@ event = {
 				has_country_flag = fop_country
 			}
 			
-			country_event = { id = fop.001 days = 5 random = 1 }
+			country_event = { id = fop.001 days = 15 }
 		}
 	}
 }

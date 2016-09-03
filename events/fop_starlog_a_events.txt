@@ -56,7 +56,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 30
 	}
 	
 	immediate = {
@@ -421,20 +421,8 @@ country_event = {
 	option = {
 		name = fop.102.a
 		is_dialog_only = yes
-		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_1 }	}
-		response_text = fop.102.error
-	}
-	option = {
-		name = fop.102.a
-		is_dialog_only = yes
 		trigger = {	has_country_flag = fop_starlog_anesie_1	}
 		response_text = fop.102.a.responses
-	}
-	option = {
-		name = fop.102.b
-		is_dialog_only = yes
-		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_2 }	}
-		response_text = fop.102.error
 	}
 	option = {
 		name = fop.102.b
@@ -445,20 +433,8 @@ country_event = {
 	option = {
 		name = fop.102.c
 		is_dialog_only = yes
-		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_3 }	}
-		response_text = fop.102.error
-	}
-	option = {
-		name = fop.102.c
-		is_dialog_only = yes
 		trigger = {	has_country_flag = fop_starlog_anesie_3 }
 		response_text = fop.102.c.responses
-	}
-	option = {
-		name = fop.102.d
-		is_dialog_only = yes
-		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_4 }	}
-		response_text = fop.102.error
 	}
 	option = {
 		name = fop.102.d
@@ -469,20 +445,8 @@ country_event = {
 	option = {
 		name = fop.102.e
 		is_dialog_only = yes
-		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_5 }	}
-		response_text = fop.102.error
-	}
-	option = {
-		name = fop.102.e
-		is_dialog_only = yes
 		trigger = {	has_country_flag = fop_starlog_anesie_5 }
 		response_text = fop.102.e.responses
-	}
-	option = {
-		name = fop.102.f
-		is_dialog_only = yes
-		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_6 }	}
-		response_text = fop.102.error
 	}
 	option = {
 		name = fop.102.f
@@ -493,20 +457,8 @@ country_event = {
 	option = {
 		name = fop.102.g
 		is_dialog_only = yes
-		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_7 }	}
-		response_text = fop.102.error
-	}
-	option = {
-		name = fop.102.g
-		is_dialog_only = yes
 		trigger = {	has_country_flag = fop_starlog_anesie_7 }
 		response_text = fop.102.g.responses
-	}
-	option = {
-		name = fop.102.h
-		is_dialog_only = yes
-		trigger = {	NOT = { has_country_flag = fop_starlog_anesie_8 }	}
-		response_text = fop.102.error
 	}
 	option = {
 		name = fop.102.h
@@ -529,7 +481,7 @@ country_event = {
 	immediate = {
 		create_country = {
 			name = "语音记录数据库"
-			#species = owner_species
+			species = ROBOT_POP_SPECIES_1
 			type = npc
 			#auto_delete = no
 		}
